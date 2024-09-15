@@ -1,7 +1,7 @@
 class KhCustomCarousel extends HTMLElement{
     constructor(){
         super();
-        this.attachShadow({ mode: 'open' });
+        this.attachShadow({ mode: 'closed' });
     }
 
     connectedCallback(){
@@ -27,7 +27,7 @@ class KhCustomCarousel extends HTMLElement{
                             box-sizing: border-box;
                         }
 
-                        img {
+                        ::slotted(img) {
                             width: 100%;
                             display: block;
                         }
